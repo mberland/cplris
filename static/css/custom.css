@@ -9,6 +9,9 @@
 
 .headshot__image {
     border-radius: 20px;
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
 }
 
 .person__grid {
