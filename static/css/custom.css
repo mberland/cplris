@@ -1,0 +1,23 @@
+.page__logo-inner:after {
+    content: "]";
+    color: var(--bg);
+}
+
+.paper {
+    text-decoration: none;
+}
+
+.headshot__image {
+    border-radius: 20px;
+}
+
+.person__grid {
+    column-width: 200px;
+}
+
+.post {
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    break-inside: avoid;
+    column-break-inside: avoid;
+}

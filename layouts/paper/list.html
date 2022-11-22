@@ -1,0 +1,20 @@
+{{ define "main" }}
+    <ul>
+    {{ range .Pages }}
+    <article>
+        <header class="paper__header">
+            <li class="paper">
+                <p>
+                    <span class="paper__author">{{ .Params.author}}</span>
+                    <span class="paper__year">({{ .Params.year}}).</span>
+                    <a href="{{ .Permalink }}" class="paper">{{ .Title | markdownify }}.</a>
+                    <span class="paper__journal">{{ .Params.journal}}</span>
+                    {{$s := printf "%s %s %s" .Title .Params.year .Params.author}}
+                    <span>[<a href="https://scholar.google.com/scholar?hl=en&q={{ $s | .RenderString }}" class="paper">scholar</a>]</span>
+                </p>
+            </li>
+        </header>
+    </article>
+    {{ end }}
+    </ul>
+{{ end }}
